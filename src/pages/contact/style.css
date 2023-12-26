@@ -1,0 +1,75 @@
+.L-contact-main{
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 50px;
+}
+.L-contact-page{
+    width: 28%;
+}
+.L-contact-page-inp{
+   color: white !important;
+    padding: 10px 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 0!important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid rgb(188, 189, 193);
+    background-clip: padding-box;
+    margin-top: 20px;
+}
+.L-contact-website-p{
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.L-contact-send{
+    background-color: #009999;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 50px 14px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.L-contact-send:hover{
+    transition: 0.5s ease-in-out;
+    background-color: #045e5e;
+}
+.L-contact-address-span{
+    width: 60%;
+    color: #999;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.L-contact-address{
+    display: block;
+}
+.L-contact-address-div{
+    margin-top: 20px;
+}
+.L-contact-map{
+    margin-top: 50px;
+}
+.L-contact-map-frame{
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+.L-people{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    padding-top: 50px;
+}
