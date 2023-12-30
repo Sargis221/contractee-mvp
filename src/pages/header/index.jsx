@@ -8,7 +8,7 @@ function Header(){
                     <span className="L-header-name-t">Contractee</span>
                 </div>
                 <div className="topnav">
-                <NavLink  className='navlink' to='/'><a className="active">Home</a></NavLink>
+                <NavLink className='navlink' to='/'><a className="active">Home</a></NavLink>
                 <NavLink to='contact' className='navlink'><a>Contact</a></NavLink>
   <div className="dropdown">
     <button className="dropbtn">Solutions
