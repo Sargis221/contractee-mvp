@@ -3,6 +3,8 @@
     border-top: 1px solid rgb(159, 159, 167);
     color: black;
     padding: 50px 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
   
     .container {
       display: flex;

@@ -1,5 +1,7 @@
 import './style.css'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
+
 
 function Contact(){
     const [error,setError] = useState('')
@@ -20,16 +22,35 @@ function Contact(){
       setError1('')
     }
   }
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2hgghbf', 'template_sva8yrp', form.current, '296AU6U9T-MEM4gU5')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
+
+
+
+  const form = useRef();
     return(
         <div className='L-contact'>
             <div className='L-contact-main'>
                     <div className='L-contact-page'>
                     <h2 className='L-about-web'>Contact Page</h2>
-                    <input type="text" placeholder='Name'onChange={emailValid} style={{borderColor: `${error}`}} className='L-contact-page-inp'/>
-                    <input type="text" placeholder='Email' onChange={emailValid1} style={{borderColor: `${error1}`}} className='L-contact-page-inp'/>
-                    <input type="text" placeholder='Subject' className='L-contact-page-inp'/>
-                    <textarea name=""placeholder='Message' className='L-contact-page-inp' id="" rows="8"></textarea>
-                    <button className='L-contact-send'>Send</button>
+                    <form ref={form} onSubmit={sendEmail} action="">
+                      <input type="text" required placeholder='Name' name='user_name' onChange={emailValid} style={{borderColor: `${error}`}} className='L-contact-page-inp'/>
+                      <input type="text" required placeholder='Email' name='user_email' onChange={emailValid1} style={{borderColor: `${error1}`}} className='L-contact-page-inp'/>
+                      <input type="text" required placeholder='Subject' name='user_subject' className='L-contact-page-inp'/>
+                      <textarea name="message" placeholder='Message' required className='L-contact-page-inp' id="" rows="8"></textarea>
+                      <button type='submit' className='L-contact-send'>Send</button>
+                    </form>
+                    
                     </div>
                     <div className='L-contact-page'>
                     <h2 className='L-about-web'>Our Address</h2>
