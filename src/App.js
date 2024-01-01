@@ -7,6 +7,7 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Riskassessment from './pages/riskassessment';
 import Assign from './pages/assign';
+import Upload from './pages/upload';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='contact' element={<Contact/>}/>
         <Route path='risk' element={<Riskassessment/>}/>
         <Route path='assign' element={<Assign/>}/>
+        <Route path='upload' element={<Upload/>}/>
       </Routes>
       <Footer/>
     </div>
