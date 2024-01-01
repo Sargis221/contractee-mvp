@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { database } from '../../firebase';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { serverTimestamp } from 'firebase/firestore';
 import { addDocumentToFirestore } from "../../utils/functions/addDocumentToFirestore";
 
 function DocumentUpload() {
@@ -50,7 +51,7 @@ function DocumentUpload() {
                     const fileData = {
                         fileName: selectedFileBlob.name,
                         fileUrl: downloadURL,
-                        uploadedAt: database.FieldValue.serverTimestamp(),
+                        uploadedAt: serverTimestamp(),
                     };
                     addDocumentToFirestore(fileData).then((docId) => {
                         console.log("Document written with ID: ", docId);

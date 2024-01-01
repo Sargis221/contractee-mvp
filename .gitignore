@@ -22,4 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.idea/*
+.idea/contractee-mvp.iml
+.idea/modules.xml
+.idea/vcs.xml
+
