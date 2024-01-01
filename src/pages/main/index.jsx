@@ -59,9 +59,9 @@ function Main(){
       }, [])
     return(
         <div className="L-main">
-            <div class="container">
+            <div className="container">
             <div className="L-cont-img" style={{backgroundImage:`url(${home})`}}/>
-            <div class="L-centered">
+            <div className="L-centered">
             <h1 className="L-main-head">Your "ALL IN ONE"</h1>
                 <h1 className="L-main-head">Contract Automation Platform</h1>
                 <p className="L-main-p">Guardians of legal data</p>

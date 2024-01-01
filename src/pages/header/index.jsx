@@ -21,7 +21,7 @@ function Header(){
     </div>
   </div>
   <NavLink to='about' className='navlink'><a>About</a></NavLink>
-  <a href="javascript:void(0);" className="icon" onclick="myFunction()">&#9776;</a>
+  {/*<a href="javascript:void(0);" className="icon" onClick={myFunction}>&#9776;</a>*/}
                 </div>
             </div>
         </div>
