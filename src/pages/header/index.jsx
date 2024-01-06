@@ -1,30 +1,47 @@
-import "./style.css"
-import { NavLink } from 'react-router-dom'
-function Header(){
-    return(
+import "./style.css";
+import {PrimaryButton, SecondaryButton} from "../../components/button/Button";
+import {NavLink} from 'react-router-dom';
+
+function Header() {
+
+    return (
         <div className="L-header-main">
             <div className="L-head">
                 <div className="L-header-name">
-                    <span className="L-header-name-t">Contractee</span>
+                    <NavLink to='/'><span className="L-header-name-t">Contractee</span></NavLink>
                 </div>
                 <div className="topnav">
-                <NavLink className='navlink' to='/'><a className="active">Home</a></NavLink>
-                <NavLink to='contact' className='navlink'><a>Contact</a></NavLink>
-  <div className="dropdown">
-    <button className="dropbtn">Solutions
-      <i className="fa fa-caret-down"></i>
-    </button>
-    <div className="dropdown-content">
-      <NavLink className='navlinkk' to='risk'><a className="disabled">Risk Assessment</a></NavLink>
-      <NavLink className='navlinkk' to='assign'><a className="disabled">Assigning tool</a></NavLink>
-      <NavLink className='navlinkk'><a className="disabled">Drafting tool</a></NavLink>
-    </div>
-  </div>
-  <NavLink to='about' className='navlink'><a>About</a></NavLink>
-  {/*<a href="javascript:void(0);" className="icon" onClick={myFunction}>&#9776;</a>*/}
+                    <NavLink className='navlink' to='/'>
+                        Home
+                    </NavLink>
+                    <NavLink to='/contact' className='navlink'>
+                        Contact
+                    </NavLink>
+                    <div className="dropdown">
+                        <button className="dropbtn">Solutions
+                            <i className="fa fa-caret-down"></i>
+                        </button>
+                        <div className="dropdown-content">
+                            <NavLink className='navlink' to='/risk'>
+                                Risk Assessment
+                            </NavLink>
+                            <NavLink className='navlink' to='/assign'>
+                                Assigning Tool
+                            </NavLink>
+                            <NavLink className='navlink' to=''>
+                                Drafting Tool
+                            </NavLink>
+                        </div>
+                    </div>
+                    <NavLink to='about' className='navlink'>
+                        About
+                    </NavLink>
+                    <PrimaryButton route='/signup' text="Get Started"/>
+                    <SecondaryButton route='/signin' text="Sign In"/>
                 </div>
             </div>
         </div>
     )
 }
+
 export default Header

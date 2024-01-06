@@ -9,6 +9,7 @@ import Riskassessment from './pages/riskassessment';
 import Assign from './pages/assign';
 import Upload from './pages/upload';
 import Viewer from './pages/viewer';
+import SignUp from './pages/signup';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='assign' element={<Assign/>}/>
         <Route path='upload' element={<Upload/>}/>
         <Route path='viewer' element={<Viewer/>}/>
+        <Route path='signup' element={<SignUp/>}/>
       </Routes>
       <Footer/>
     </div>

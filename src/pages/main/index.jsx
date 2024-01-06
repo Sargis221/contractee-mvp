@@ -8,7 +8,6 @@ import Steps from "../../components/steps"
 import rev1 from "../../assets/img/rev1.jpeg"
 import rev2 from "../../assets/img/rev2.jpeg"
 import rev3 from "../../assets/img/rev3.jpeg"
-import Reviews from "../../components/reviews"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from "react"
@@ -100,7 +99,7 @@ function Main() {
             <div className="L-main-how" data-aos="zoom-in">
 
                 {
-                    step.map(el => <Steps icon={el.icon} text={el.text} stepcount={el.stepcount}/>)
+                    step.map((el, index) => <Steps key = {index} icon={el.icon} text={el.text} stepcount={el.stepcount}/>)
                 }
             </div>
             {/* <h1 className="L-main-headline">What Others Say</h1>
