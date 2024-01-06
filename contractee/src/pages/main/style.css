@@ -1,0 +1,149 @@
+.L-main{
+    width: 100%;
+    background-color: white;
+}
+.L-main-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.L-main-head{
+    -webkit-text-stroke: 0.5px rgb(135, 42, 210);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+.L-main-body-inner{
+    padding-top: 40px;
+}
+.L-main-p{
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+}
+.L-cont-img{
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+  .L-centered {
+    padding-top: 150px;
+  }
+  .L-main-features{
+    margin: 50px 0;
+  }
+  .L-main-photo{
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 10px 10px 8px #888888;
+  }
+  .L-main-feat-t{
+    width: 500px;
+    color: black;
+    font-size: 18px;
+  }
+  .L-main-feat1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+  .L-main-headline{
+    -webkit-text-stroke: 0.5px rgb(74, 23, 125);
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin: 50px 0;
+    font-size: 30px;
+  }
+.L-main-how{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+.L-main-review{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+.L-sub{
+    width: 70%;
+    background-color: rgba(217, 217, 222, 0.305);
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.L-sub-inner{
+    padding: 100px 0;
+}
+.L-sub-p{
+    color: rgb(127, 124, 124);
+
+}
+.L-sub-h3{
+    color: black;
+    margin-top: 10px;
+}
+.L-sub-btn{
+    border: none;
+    color: white;
+    background-color: rgb(244, 87, 87);
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.L-sub-btn:hover{
+    background-color: rgb(211, 84, 84);
+    transition: 0.5s ease-in-out;
+}
+.wrapper{
+    display: flex;
+    height: 55vh;
+    width: 100vw;
+    justify-content: center;
+}
+.accordion-title{
+    font-size: 21px;
+    font-weight: bolder;
+}
+.accordion{
+    width: 650px;
+}
+.item{
+    border-bottom: 1px solid gray;
+    margin-bottom: 12px;
+    padding: 15px 25px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(62, 17, 108);
+    cursor: pointer;
+}
+.answer{
+    color: #787777;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(0, 1, 0, 1);
+   
+}
+.answer.show{
+    height: auto;
+    max-height: 9999px;
+    transition: all 0.2s cubic-bezier(1, 0, 1, 0);
+}

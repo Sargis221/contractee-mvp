@@ -1,0 +1,29 @@
+svg {
+  display: unset;
+}
+.icon{
+    width: 40px !important;
+    height: 40px !important;
+    color: rgb(151, 167, 175);
+  }
+  .L-main-step{
+    width: 260px;
+    text-align: center;
+  }
+  .L-main-h3{
+    color: black;
+    margin-top: 10px;
+  }
+  .L-main-stepp{
+    color: black;
+    margin-top: 10px;
+  }
+  .L-main-btn{
+    margin-top: 10px;
+    border: none;
+    background-color: transparent;
+    color: rgb(112, 147, 203);
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
