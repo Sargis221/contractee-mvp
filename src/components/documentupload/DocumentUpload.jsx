@@ -29,7 +29,7 @@ function DocumentUpload() {
             setUploadStatus('Only PDF files are supported.')
         }
         const storage = getStorage();
-        const uploadRef = ref(storage, `documents/${selectedFile.name}`);
+        const uploadRef = ref(storage, `uploadedDocuments/${selectedFile.name}`);
         const uploadTask = uploadBytesResumable(uploadRef, selectedFileBlob);
 
         uploadTask.on(
@@ -48,13 +48,12 @@ function DocumentUpload() {
                 // Handle successful uploads
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                     const fileData = {
-                        fileName: selectedFileBlob.name,
+                        fileName: selectedFile.name,
                         fileUrl: downloadURL,
                         uploadedAt: serverTimestamp(),
                     };
                     addDocumentToFirestore(fileData).then((docId) => {
                         console.log("Document written with ID: ", docId);
-                        redirect('/')
                     });
                 });
             }

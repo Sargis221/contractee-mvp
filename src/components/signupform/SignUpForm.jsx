@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import {auth, database} from "../../firebase";
-import {createUserWithEmailAndPassword} from "firebase/auth";
+import {addDoc, collection} from "firebase/firestore";
+import {createUserWithEmailAndPassword, sendEmailVerification} from "firebase/auth";
 import {PrimaryButton} from "../button/Button";
+import {useNavigate} from "react-router-dom";
 
 function SignUpForm() {
     const [name, setName] = useState('');
@@ -11,26 +13,38 @@ function SignUpForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (event) => {
-        event.preventDefault()
+        event.preventDefault();
+
         await createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 const user = userCredential.user;
-                const userRef = database.doc(`users/${user.uid}`);
-                    userRef.set({
-                    email,
-                    name,
-                    surname,
-                    phoneNumber,
-                    jobTitle,
-                    createdAt: new Date()
-                });
-                return user;
+
+                try {
+                    const userRef = await addDoc(collection(database, "users"), {
+                        uid: user.uid,
+                        email,
+                        name,
+                        surname,
+                        phoneNumber,
+                        jobTitle,
+                        createdAt: new Date()
+                    });
+                    console.log("User created: ", user.email);
+
+                    // Send verification email
+                    await sendEmailVerification(auth.currentUser);
+                    navigate('/confirm-email'); // Replace with your route
+                } catch (error) {
+                    console.log("Error creating user or sending email verification: ", error);
+                }
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log("Couldn't sign up: ", errorCode, errorMessage)
+                console.log("Couldn't sign up: ", errorCode, errorMessage);
             });
     };
 
