@@ -4,7 +4,7 @@ svg {
 .icon{
     width: 40px !important;
     height: 40px !important;
-    color: rgb(151, 167, 175);
+    color: rgb(217, 217, 224);
   }
   .L-main-step{
     width: 260px;
@@ -12,6 +12,8 @@ svg {
   }
   .L-main-h3{
     color: black;
+    font-weight: bolder;
+    font-size: 20px;
     margin-top: 10px;
   }
   .L-main-stepp{
@@ -22,7 +24,7 @@ svg {
     margin-top: 10px;
     border: none;
     background-color: transparent;
-    color: rgb(112, 147, 203);
+    color: rgb(176, 207, 255);
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;

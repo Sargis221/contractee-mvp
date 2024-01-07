@@ -6,7 +6,7 @@ function Footer(){
           <div className="container">
             <div className="footer-info">
               <h1>Contractee</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>Streamline contract negotiations with precision and boost the efficiency of your legal department.</p>
             </div>
             <div className="footer-links">
               <ul>
@@ -18,13 +18,12 @@ function Footer(){
             </div>
             <div className="footer-contact">
               <h2>Contact Us</h2>
-              <p>Email: info@yourcompany.com</p>
-              <p>Phone: (123) 456-7890</p>
+              <p>Email: Info@contractee.net</p>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Contractee. All rights reserved.</p>
         </div>
       </footer>
     )

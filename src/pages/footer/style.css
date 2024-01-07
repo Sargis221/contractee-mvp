@@ -52,7 +52,7 @@
             transition: color 0.3s ease;
   
             &:hover {
-              color: #3498db;
+              color: rgb(109, 3, 247);
             }
           }
         }
