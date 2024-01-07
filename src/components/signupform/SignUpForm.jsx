@@ -4,6 +4,8 @@ import {addDoc, collection} from "firebase/firestore";
 import {createUserWithEmailAndPassword, sendEmailVerification} from "firebase/auth";
 import {PrimaryButton} from "../button/Button";
 import {useNavigate} from "react-router-dom";
+import {v4 as uuidv4} from "uuid";
+
 
 function SignUpForm() {
     const [name, setName] = useState('');
@@ -24,7 +26,7 @@ function SignUpForm() {
 
                 try {
                     const userRef = await addDoc(collection(database, "users"), {
-                        uid: user.uid,
+                        uid: uuidv4(),
                         email,
                         name,
                         surname,
@@ -32,7 +34,6 @@ function SignUpForm() {
                         jobTitle,
                         createdAt: new Date()
                     });
-                    console.log("User created: ", user.email);
 
                     // Send verification email
                     await sendEmailVerification(auth.currentUser);
