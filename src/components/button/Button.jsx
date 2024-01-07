@@ -11,7 +11,7 @@ function PrimaryButton({ text, route }) {
     return (
         <button
             onClick={handleClick}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
+            className="bg-purple-900 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded"
         >
             {text}
         </button>
@@ -28,7 +28,7 @@ function SecondaryButton({ text, route }) {
     return (
         <button
             onClick={handleClick}
-            className="bg-transparent hover:bg-blue-500 text-blue-500 font-medium hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            className="bg-transparent hover:bg-purple-900 text-purple-900 font-medium hover:text-white py-2 px-4 border border-purple-700 hover:border-transparent rounded"
         >
             {text}
         </button>

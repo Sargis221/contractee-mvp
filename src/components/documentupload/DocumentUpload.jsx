@@ -63,7 +63,7 @@ function DocumentUpload() {
         <div className="flex flex-col items-center justify-center p-6 border border-gray-300 rounded-lg shadow-md">
             <label
                 htmlFor="file-upload"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
+                className="bg-purple-900 cursor-pointer hover:bg-purple-700 text-white font-medium py-2 px-4 rounded"
             >
                 Choose File
             </label>
@@ -75,7 +75,7 @@ function DocumentUpload() {
             />
             <span className="mb-4 text-sm text-gray-600">{selectedFile?.name}</span>
             <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
+                className="bg-purple-700 hover:bg-purple-500 cursor-pointer text-white font-medium py-2 px-4 rounded"
                 onClick={handleFileUpload}
                 disabled={!selectedFile}>
                 Upload

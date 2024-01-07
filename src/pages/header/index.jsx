@@ -1,6 +1,7 @@
 import "./style.css";
 import {PrimaryButton, SecondaryButton} from "../../components/button/Button";
 import {NavLink} from 'react-router-dom';
+import logo from '../../assets/img/logo.png'
 
 function Header() {
 
@@ -8,6 +9,7 @@ function Header() {
         <div className="L-header-main">
             <div className="L-head">
                 <div className="L-header-name">
+                <div className="L-head-logo" style={{backgroundImage: `url(${logo})`}}/>
                     <NavLink to='/'><span className="L-header-name-t">Contractee</span></NavLink>
                 </div>
                 <div className="topnav">
@@ -30,6 +32,9 @@ function Header() {
                             </NavLink>
                             <NavLink className='navlink' to=''>
                                 Drafting Tool
+                            </NavLink>
+                            <NavLink className='navlink' to='upload'>
+                                Upload
                             </NavLink>
                         </div>
                     </div>
