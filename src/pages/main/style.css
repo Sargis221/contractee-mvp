@@ -8,7 +8,7 @@
     align-items: center;
 }
 .L-main-head{
-    -webkit-text-stroke: 1.1px black;
+    -webkit-text-stroke: 0.5px rgb(135, 42, 210);
     color: white;
     text-align: center;
     font-size: 40px;
@@ -34,10 +34,7 @@
     color: black;
   }
   .L-centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 150px;
   }
   .L-main-features{
     margin: 50px 0;
@@ -63,11 +60,12 @@
     margin: 50px 0;
   }
   .L-main-headline{
-    -webkit-text-stroke: 0.6px white;
+    -webkit-text-stroke: 0.5px rgb(74, 23, 125);
     display: flex;
     justify-content: center;
     color: black;
     margin: 50px 0;
+    font-size: 30px;
   }
 .L-main-how{
     display: flex;
@@ -111,4 +109,41 @@
 .L-sub-btn:hover{
     background-color: rgb(211, 84, 84);
     transition: 0.5s ease-in-out;
+}
+.wrapper{
+    display: flex;
+    height: 55vh;
+    width: 100vw;
+    justify-content: center;
+}
+.accordion-title{
+    font-size: 21px;
+    font-weight: bolder;
+}
+.accordion{
+    width: 650px;
+}
+.item{
+    border-bottom: 1px solid gray;
+    margin-bottom: 12px;
+    padding: 15px 25px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(62, 17, 108);
+    cursor: pointer;
+}
+.answer{
+    color: #787777;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(0, 1, 0, 1);
+   
+}
+.answer.show{
+    height: auto;
+    max-height: 9999px;
+    transition: all 0.2s cubic-bezier(1, 0, 1, 0);
 }

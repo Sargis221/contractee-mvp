@@ -30,7 +30,7 @@
     font-weight: 400;
 }
 .L-contact-send{
-    background-color: #009999;
+    background-color: rgb(51, 20, 122);
     border: 0;
     border-radius: 5px;
     padding: 12px 50px 14px;
@@ -44,7 +44,7 @@
 }
 .L-contact-send:hover{
     transition: 0.5s ease-in-out;
-    background-color: #045e5e;
+    background-color: rgb(53, 8, 159);
 }
 .L-contact-address-span{
     width: 60%;

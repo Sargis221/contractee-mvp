@@ -11,7 +11,7 @@ import rev3 from "../../assets/img/rev3.jpeg"
 import Reviews from "../../components/reviews"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import {useEffect} from "react"
+import {useEffect, useState} from "react"
 
 
 function Main() {
@@ -54,16 +54,42 @@ function Main() {
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cum eum adipisci ipsum suscipit. Repellat molestiae dolorem odio quisquam nam nisi quia ipsa obcaecati ipsum quod beatae, minus, tempore incidunt.',
         },
     ]
+    let faq = [
+        {
+            question: 'What is the main function of Contractee?',
+            answer: 'The main function of Contractee is making the process of contract management more efficient by automating the traditional tasks of contract lawyer, such as risk assessment, task management and contract drafting.',
+        },
+        {
+            question: 'Why should I trust my data to Contractee?',
+            answer: 'Contractee has implemented robust access controls and authentication mechanisms. Access to sensitive data is limited to a need-to-know basis, ensuring that employees have access to the data required for their roles. Furthermore, Contractee conducts regular audits and vulnerability assessments to identify and address potential weaknesses in the system. Contractee also performs penetration testing to simulate real-world attacks and strengthen the system against potential threats.',
+        },
+        {
+            question: 'Question 3',
+            answer: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim voluptatem velit necessitatibus ab molestias voluptates, dicta exercitationem, autem, modi esse magnam maxime et blanditiis animi sequi sit eum doloribus ea?',
+        },
+        {
+            question: 'Question 4',
+            answer: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim voluptatem velit necessitatibus ab molestias voluptates, dicta exercitationem, autem, modi esse magnam maxime et blanditiis animi sequi sit eum doloribus ea?',
+        },
+    ]
+    let [selected, setSelected] = useState(null);
+    let toggle = (i) => {
+        if(selected == i){
+            return setSelected(null);
+        }
+        setSelected(i);
+    }
     useEffect(() => {
         AOS.init();
     }, [])
     return (
         <div className="L-main">
-            <div className="L-cont-img" style={{backgroundImage: `url(${home})`}}/>
-            <div className="L-centered">
+            <div className="L-cont-img" style={{backgroundImage: `url(${home})`}}>
+                <div className="L-centered">
                 <h1 className="L-main-head">Your "ALL IN ONE"</h1>
                 <h1 className="L-main-head">Contract Automation Platform</h1>
                 <p className="L-main-p">Guardians of legal data</p>
+            </div>
             </div>
             <div className="L-main-features">
                 <h1 className="L-main-headline">Our top features</h1>
@@ -116,6 +142,24 @@ function Main() {
                     <p className="L-sub-p">Become the first user of our platform</p>
                     <h2 className="L-sub-h3">Subscribe to get an early access</h2>
                     <button className="L-sub-btn">Join us</button>
+                </div>
+            </div>
+            <h1 className="L-main-headline">FAQ</h1>
+            <div className="L-FAQ">
+                <div className="wrapper">
+                <div className="accordion">
+                    {
+                        faq.map((item, i) =>(
+                            <div className="item">
+                                <div className="title" onClick={() => toggle(i)}>
+                                    <h2 className="accordion-title">{item.question}</h2>
+                                    <span>{selected === i ? '-' : '+'}</span>
+                                </div>
+                                <div className={selected === i ? 'answer show' : 'answer'}>{item.answer}</div>
+                            </div>
+                        ))
+                    }
+                </div>
                 </div>
             </div>
         </div>

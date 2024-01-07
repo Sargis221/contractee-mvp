@@ -2,7 +2,7 @@
     padding: 20px;
 }
 .L-about-web{
-    color: #009999;
+    color: rgb(51, 20, 122);
     font-size: 2rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -61,7 +61,7 @@
     width: 32%;
 }
 .L-about-column-icon{
-    color: #009999;
+    color: rgb(51, 20, 122);
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
     font-size: 3em;
