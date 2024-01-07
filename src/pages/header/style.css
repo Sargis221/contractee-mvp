@@ -123,12 +123,12 @@ background-size: cover;
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
   color: rgb(109, 3, 247);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 /* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 /* Show the dropdown menu when the user moves the mouse over the dropdown button */
