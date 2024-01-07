@@ -1,5 +1,5 @@
 import "./style.css"
-import home from '../../assets/img/home.jpg'
+import home from '../../assets/img/home.jpeg'
 import risk from '../../assets/img/riskassess.jpeg'
 import assign from '../../assets/img/assign.jpeg'
 import draft from '../../assets/img/drafting.jpeg'
@@ -83,13 +83,14 @@ function Main() {
     }, [])
     return (
         <div className="L-main">
-            <div className="L-cont-img" style={{backgroundImage: `url(${home})`}}>
-                <div className="L-centered">
+            <div className="L-main-upper">
+            <div className="L-centered" data-aos="fade-right">
                 <h1 className="L-main-head">Your "ALL IN ONE"</h1>
                 <h1 className="L-main-head">Contract Automation Platform</h1>
-                <p className="L-main-p">PRIORITIZING DATA SECIRITY</p>
+                <p className="L-main-p">PRIORITIZING DATA SECURITY</p>
             </div>
-            </div>
+            <div className="L-cont-img" data-aos="fade-left" style={{backgroundImage: `url(${home})`}}/>
+                </div>
             <div className="L-main-features">
                 <h1 className="L-main-headline">Our top features</h1>
                 <div className="L-main-feat1">

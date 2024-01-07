@@ -9,7 +9,7 @@
 }
 .L-main-head{
     -webkit-text-stroke: 0.5px rgb(135, 42, 210);
-    color: white;
+    color: rgb(18, 4, 66);
     text-align: center;
     font-size: 40px;
 }
@@ -17,24 +17,32 @@
     padding-top: 40px;
 }
 .L-main-p{
-    color: white;
+    color: rgb(79, 39, 122);
     text-align: center;
     padding-top: 7px;
 }
+.L-main-upper{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
+}
+.L-centered{
+    width: 50%;
+}
 .L-cont-img{
-    width: 100%;
+    width: 50%;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 80%;
 }
 .container {
     position: relative;
     text-align: center;
     color: black;
-  }
-  .L-centered {
-    padding-top: 150px;
   }
   .L-main-features{
     margin: 50px 0;
