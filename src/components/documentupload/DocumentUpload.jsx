@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { database } from '../../firebase';
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { serverTimestamp } from 'firebase/firestore';
-import { addDocumentToFirestore } from "../../utils/functions/addDocumentToFirestore";
+import React, {useState} from 'react';
+import {getStorage, ref, uploadBytesResumable, getDownloadURL} from "firebase/storage";
+import {serverTimestamp} from 'firebase/firestore';
+import {addDocumentToFirestore} from "../../utils/functions/addDocumentToFirestore";
+import {redirect} from "react-router-dom";
 
 function DocumentUpload() {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -17,7 +17,6 @@ function DocumentUpload() {
     };
 
     const handleFileUpload = () => {
-        debugger;
         if (!selectedFile) {
             return;
         }
@@ -30,7 +29,7 @@ function DocumentUpload() {
             setUploadStatus('Only PDF files are supported.')
         }
         const storage = getStorage();
-        const uploadRef = ref(storage,`documents/${selectedFile.name}`);
+        const uploadRef = ref(storage, `uploadedDocuments/${selectedFile.name}`);
         const uploadTask = uploadBytesResumable(uploadRef, selectedFileBlob);
 
         uploadTask.on(
@@ -49,7 +48,7 @@ function DocumentUpload() {
                 // Handle successful uploads
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                     const fileData = {
-                        fileName: selectedFileBlob.name,
+                        fileName: selectedFile.name,
                         fileUrl: downloadURL,
                         uploadedAt: serverTimestamp(),
                     };
@@ -64,7 +63,7 @@ function DocumentUpload() {
         <div className="flex flex-col items-center justify-center p-6 border border-gray-300 rounded-lg shadow-md">
             <label
                 htmlFor="file-upload"
-                className="mb-4 inline-block cursor-pointer px-4 py-2 text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
             >
                 Choose File
             </label>
@@ -76,11 +75,10 @@ function DocumentUpload() {
             />
             <span className="mb-4 text-sm text-gray-600">{selectedFile?.name}</span>
             <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
                 onClick={handleFileUpload}
-                disabled={!selectedFile}
-                className="px-6 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:bg-indigo-300"
-            >
-                Upload Document
+                disabled={!selectedFile}>
+                Upload
             </button>
             {uploadProgress > 0 && <p>Upload Progress: {uploadProgress.toFixed(2)}%</p>}
             {uploadStatus && <p>{uploadStatus}</p>}

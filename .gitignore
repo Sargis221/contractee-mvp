@@ -25,4 +25,4 @@ yarn-error.log*
 .idea/contractee-mvp.iml
 .idea/modules.xml
 .idea/vcs.xml
-
+aws.xml
