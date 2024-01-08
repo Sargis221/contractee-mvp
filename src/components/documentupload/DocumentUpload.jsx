@@ -1,13 +1,19 @@
 import React, {useState} from 'react';
-import {getStorage, ref, uploadBytesResumable, getDownloadURL} from "firebase/storage";
+import {getDownloadURL, getStorage, ref, uploadBytesResumable} from "firebase/storage";
 import {serverTimestamp} from 'firebase/firestore';
 import {addDocumentToFirestore} from "../../utils/functions/addDocumentToFirestore";
-import {redirect} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {v4 as uuidv4} from "uuid";
+import {useAuth} from "../../context/AuthContext";
+
 
 function DocumentUpload() {
     const [selectedFile, setSelectedFile] = useState(null);
     const [uploadProgress, setUploadProgress] = useState(0);
     const [uploadStatus, setUploadStatus] = useState('');
+    const navigate = useNavigate();
+
+    const {currentUser} = useAuth();
 
     const handleFileChange = (event) => {
         if (event?.target?.files?.length > 0) {
@@ -18,18 +24,16 @@ function DocumentUpload() {
 
     const handleFileUpload = () => {
         if (!selectedFile) {
+            setUploadStatus('Please select a file to upload.');
             return;
         }
 
         let selectedFileBlob = null;
 
-        if (selectedFile.type === 'application/pdf') {
-            selectedFileBlob = new Blob([selectedFile], {type: 'application/pdf'});
-        } else {
-            setUploadStatus('Only PDF files are supported.')
-        }
+        selectedFileBlob = new Blob([selectedFile], {type: '.doc,.docx,application/pdf'});
+
         const storage = getStorage();
-        const uploadRef = ref(storage, `uploadedDocuments/${selectedFile.name}`);
+        const uploadRef = ref(storage, `documents/${uuidv4()}-${selectedFile.name}`);
         const uploadTask = uploadBytesResumable(uploadRef, selectedFileBlob);
 
         uploadTask.on(
@@ -48,12 +52,14 @@ function DocumentUpload() {
                 // Handle successful uploads
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                     const fileData = {
+                        fileId: uuidv4(),
                         fileName: selectedFile.name,
                         fileUrl: downloadURL,
                         uploadedAt: serverTimestamp(),
                     };
-                    addDocumentToFirestore(fileData).then((docId) => {
-                        console.log("Document written with ID: ", docId);
+                    addDocumentToFirestore(fileData, currentUser).then((docId) => {
+                        alert("Document uploaded successfully.");
+                        navigate('/documents');
                     });
                 });
             }
@@ -72,6 +78,7 @@ function DocumentUpload() {
                 type="file"
                 onChange={handleFileChange}
                 className="hidden"
+                accept=".doc,.docx,application/pdf"
             />
             <span className="mb-4 text-sm text-gray-600">{selectedFile?.name}</span>
             <button
@@ -83,6 +90,7 @@ function DocumentUpload() {
             {uploadProgress > 0 && <p>Upload Progress: {uploadProgress.toFixed(2)}%</p>}
             {uploadStatus && <p>{uploadStatus}</p>}
         </div>
+
     );
 }
 
