@@ -7,7 +7,14 @@
     margin-top: 50px;
 }
 .L-contact-page{
-    width: 28%;
+    width: 45%;
+}
+.L-contact-web{
+    color: rgb(30, 15, 55);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
 .L-contact-page-inp{
    color: rgb(0, 0, 0) !important;

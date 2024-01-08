@@ -81,7 +81,7 @@ function Main() {
     ]
     let [selected, setSelected] = useState(null);
     let toggle = (i) => {
-        if(selected == i){
+        if(selected === i){
             return setSelected(null);
         }
         setSelected(i);
