@@ -1,10 +1,7 @@
-.L-about-main{
-    padding: 20px;
-}
 .L-about-web{
-    color: rgb(51, 20, 122);
+    color: rgb(245, 241, 241);
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 3rem;
     font-weight: 500;
     line-height: 1.2;
 }
@@ -23,7 +20,7 @@
 }
 .text-bold{
     font-weight: bolder;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .L-about-website1{
     width: 59%;
@@ -36,20 +33,20 @@
     background-size: cover;
 }
 .L-about-website-p{
-    color: #565454;
+    color: #353039;
     line-height: 1.8;
     margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 400;
 }
 .L-about-column{
-    display: flex;
     margin-top: 50px;
     padding-top: 50px;
-    gap: 30px;
 }
 .L-about-column-l{
-    width: 49%;
+    padding: 50px;
+    padding-bottom: 70px;
+    background-color: #000c7699;
 }
 .L-about-3columns{
     display: flex;
@@ -89,4 +86,74 @@
     display: flex;
     margin: 0 auto;
     margin-top: 50px;
+}
+.L-about-head{
+    -webkit-text-stroke: 0.5px rgb(135, 42, 210);
+    color: rgb(18, 4, 66);
+    text-align: center;
+    font-size: 40px;
+}
+.L-about-p{
+    color: rgb(79, 39, 122);
+    text-align: center;
+    padding-top: 7px;
+}
+.L-about-pp{
+    color: rgb(79, 39, 122);
+    text-align: center;
+    padding-top: 7px;
+    font-size: 20px;
+}
+.L-about-upper{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
+    gap: 50px;
+}
+.L-about-centered{
+    width: 50%;
+}
+.L-about-img{
+    width: 50%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+}
+.L-about-feat{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #806c961c;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.L-about-feat-in{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.L-about-feat-desc{
+    width: 45%;
+}
+.L-about-feat-img{
+    width: 40%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.L-about-feat-desc-text{
+    color: #1d0c36;
+    font-size: 28px;
+    padding-top: 50px;
+}
+.L-about-feat-desc-textp{
+    color: #7e7f87;
 }

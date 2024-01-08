@@ -30,7 +30,7 @@ function Header() {
                             <NavLink className='navlink' to='/assign'>
                                 Assigning Tool
                             </NavLink>
-                            <NavLink className='navlink' to=''>
+                            <NavLink className='navlink disabled' to=''>
                                 Drafting Tool
                             </NavLink>
                             <NavLink className='navlink' to='upload'>
@@ -39,7 +39,7 @@ function Header() {
                         </div>
                     </div>
                     <NavLink to='about' className='navlink'>
-                        About
+                        About us
                     </NavLink>
                     <PrimaryButton route='/signup' text="Get Started"/>
                     <SecondaryButton route='/signin' text="Sign In"/>
