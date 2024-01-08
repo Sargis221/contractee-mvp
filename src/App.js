@@ -29,7 +29,7 @@ function App() {
                         <Route path='signup' element={<SignUp/>}/>
                         <Route path='signin' element={<SignIn/>}/>
                         <Route path='upload' element={<ProtectedRoute><Upload/></ProtectedRoute>}/>
-                        <Route path='documents' element={<Documents/>}/>
+                        <Route path='documents' element={<ProtectedRoute><Documents/></ProtectedRoute>}/>
                     </Routes>
                 </AuthProvider>
                 <Footer/>

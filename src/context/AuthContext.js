@@ -5,7 +5,9 @@ import {onAuthStateChanged} from "firebase/auth";
 const AuthContext = createContext(null);
 
 export const useAuth = () => {
-    return useContext(AuthContext);
+    const { currentUser, loading } = useContext(AuthContext);
+    const isAuthenticated = currentUser !== null; // User is authenticated if currentUser is not null
+    return { currentUser, isAuthenticated, loading };
 }
 
 export const AuthProvider = ({children}) => {
