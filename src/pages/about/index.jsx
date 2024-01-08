@@ -4,23 +4,7 @@ import Vlad from '../../assets/img/vlad.jpeg'
 import home from '../../assets/img/home.jpeg'
 
 function About(){
-    let team = [
-        {
-            img: Sargis,
-            pos: "CEO",
-            desc: "blah bag blag",
-        },
-        {
-            img: Vlad,
-            pos: "CEO",
-            desc: "blah bag blag",
-        },
-        {
-            img: Sargis,
-            pos: "CEO",
-            desc: "blah bag blag",
-        },
-    ]
+
     return(
         <div className='L-about'>
             <div className='L-about-main'>
@@ -36,7 +20,7 @@ The increased transparency, cost-efficiency, and speed achieved through automati
        
         <div className='L-about-column'>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#000b76" fill-opacity="0.6" d="M0,64L120,106.7C240,149,480,235,720,229.3C960,224,1200,128,1320,80L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+  <path fill="#000b76" fillOpacity="0.4" d="M0,64L120,106.7C240,149,480,235,720,229.3C960,224,1200,128,1320,80L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
 </svg>
             <div className='L-about-column-l'>
             <h2 className='L-about-web'>Key Benefits of the Product</h2>

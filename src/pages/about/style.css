@@ -46,7 +46,7 @@
 .L-about-column-l{
     padding: 50px;
     padding-bottom: 70px;
-    background-color: #000c7699;
+    background-color: #000c7666;
 }
 .L-about-3columns{
     display: flex;
@@ -121,7 +121,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 80%;
 }
 .L-about-feat{
     width: 80%;
