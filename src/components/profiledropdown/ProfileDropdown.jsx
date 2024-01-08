@@ -30,10 +30,12 @@ const ProfileDropdown = () => {
 
             {showDropdown && (
                 <div
-                    className="absolute right-0 mt-2 w-36 text-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    className="absolute right-0 mt-2 w-48 text-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                         <NavLink to="/documents" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My
                             Documents</NavLink>
+                        <NavLink to="/upload" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            Upload Document</NavLink>
                         <button onClick={handleSignOut}
                                 className="block w-full text-right px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign
                             Out
