@@ -24,14 +24,14 @@ The increased transparency, cost-efficiency, and speed achieved through automati
 </svg>
             <div className='L-about-column-l'>
             <h2 className='L-about-web'>Key Benefits of the Product</h2>
-            <ul>
-              <li> <p className='L-about-website-p'><span className='text-bold'>Transparency:</span> Gain real-time visibility into the negotiation process. Every stakeholder involved can easily track progress, updates, and changes, promoting clarity and accountability.</p></li>
-              <li> <p className='L-about-website-p'><span className='text-bold'>Cost-Efficiency:</span> Cut down on resource-draining manual tasks, saving valuable time and money. Our platform optimizes workflows, allowing your team to allocate resources more strategically.</p></li>
-              <li> <p className='L-about-website-p'><span className='text-bold'>Speed:</span> Expedite negotiations without sacrificing accuracy. Our automated system facilitates efficient collaboration, enabling quicker decision-making and contract finalization.</p></li>
-              <li> <p className='L-about-website-p'><span className='text-bold'>Precision:</span> Reduce the risk of errors and discrepancies inherent in manual processes. Our technology ensures that contract terms and details are consistently accurate and in compliance.</p></li>
-              <li> <p className='L-about-website-p'><span className='text-bold'>Competitive Edge:</span> Stay ahead in a fast-paced industry. By automating and streamlining your negotiation processes, you'll be positioned to seize opportunities swiftly, leaving competitors behind.</p></li>
-              <li> <p className='L-about-website-p'><span className='text-bold'>Scalability:</span> Effortlessly handle a growing client base. Our platform's scalability ensures that your negotiation process remains efficient and effective, regardless of the volume.</p></li>
-            </ul>
+        
+             <p className='L-about-website-p'><span className='text-bold'>Transparency:</span> Gain real-time visibility into the negotiation process. Every stakeholder involved can easily track progress, updates, and changes, promoting clarity and accountability.</p>
+             <p className='L-about-website-p'><span className='text-bold'>Cost-Efficiency:</span> Cut down on resource-draining manual tasks, saving valuable time and money. Our platform optimizes workflows, allowing your team to allocate resources more strategically.</p>
+             <p className='L-about-website-p'><span className='text-bold'>Speed:</span> Expedite negotiations without sacrificing accuracy. Our automated system facilitates efficient collaboration, enabling quicker decision-making and contract finalization.</p>
+             <p className='L-about-website-p'><span className='text-bold'>Precision:</span> Reduce the risk of errors and discrepancies inherent in manual processes. Our technology ensures that contract terms and details are consistently accurate and in compliance.</p>
+             <p className='L-about-website-p'><span className='text-bold'>Competitive Edge:</span> Stay ahead in a fast-paced industry. By automating and streamlining your negotiation processes, you'll be positioned to seize opportunities swiftly, leaving competitors behind.</p>
+             <p className='L-about-website-p'><span className='text-bold'>Scalability:</span> Effortlessly handle a growing client base. Our platform's scalability ensures that your negotiation process remains efficient and effective, regardless of the volume.</p>
+            
             </div>
 
         </div>
