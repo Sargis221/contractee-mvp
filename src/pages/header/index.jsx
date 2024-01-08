@@ -2,8 +2,12 @@ import "./style.css";
 import {PrimaryButton, SecondaryButton} from "../../components/button/Button";
 import {NavLink} from 'react-router-dom';
 import logo from '../../assets/img/logo.png'
+import {useAuth} from "../../context/AuthContext";
+import ProfileDropdown from "../../components/profiledropdown/ProfileDropdown";
 
 function Header() {
+
+    const {isAuthenticated} = useAuth()
 
     return (
         <div className="L-header-main">
@@ -24,25 +28,29 @@ function Header() {
                             <i className="fa fa-caret-down"></i>
                         </button>
                         <div className="dropdown-content">
-                            <NavLink className='navlink' to='/risk'>
+                            <NavLink className='navlink' to='/upload'>
                                 Risk Assessment
                             </NavLink>
-                            <NavLink className='navlink' to='/assign'>
-                                Assigning Tool
+                            <NavLink className='navlink' to='/upload'>
+                                Task Assignment
                             </NavLink>
                             <NavLink className='navlink disabled' to=''>
                                 Drafting Tool
-                            </NavLink>
-                            <NavLink className='navlink' to='upload'>
-                                Upload
                             </NavLink>
                         </div>
                     </div>
                     <NavLink to='about' className='navlink'>
                         About us
                     </NavLink>
-                    <PrimaryButton route='/signup' text="Get Started"/>
-                    <SecondaryButton route='/signin' text="Sign In"/>
+                    {isAuthenticated ? (
+                        <ProfileDropdown />
+                    ) : (
+                        <>
+                            <PrimaryButton route='/signup' text="Get Started"/>
+                            <SecondaryButton route='/signin' text="Sign In"/>
+                        </>
+                    )}
+
                 </div>
             </div>
         </div>
