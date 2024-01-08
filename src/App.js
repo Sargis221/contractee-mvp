@@ -19,7 +19,6 @@ function App() {
         <div className='App-main'>
             <div className="App">
                 <Header/>
-                <AuthProvider>
                     <Routes>
                         <Route path='/' element={<Main/>} index/>
                         <Route path='about' element={<About/>}/>
@@ -31,7 +30,6 @@ function App() {
                         <Route path='upload' element={<ProtectedRoute><Upload/></ProtectedRoute>}/>
                         <Route path='documents' element={<ProtectedRoute><Documents/></ProtectedRoute>}/>
                     </Routes>
-                </AuthProvider>
                 <Footer/>
             </div>
         </div>
